@@ -164,5 +164,6 @@ export class MultiSelectPCFControl implements ComponentFramework.StandardControl
 	 * i.e. cancelling any pending remote calls, removing listeners, etc.
 	 */
 	public destroy(): void {
+		ReactDOM.unmountComponentAtNode(this._container);
 	}
 }
